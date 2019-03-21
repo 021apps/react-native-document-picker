@@ -32,6 +32,12 @@ class DocumentPickerUtil {
   static pdf() {
     return (Platform.OS === 'android') ? "application/pdf" : "com.adobe.pdf";
   }
+  
+  static p12() {
+    return Platform.OS === "android"
+      ? "application/x-pkcs12"
+      : "public.x-pkcs12";
+  }
 }
 
 module.exports = {DocumentPickerUtil, DocumentPicker};
